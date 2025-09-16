@@ -1,11 +1,18 @@
-<?php
-include 'db_connect.php';
-
-$fullName = $_POST['fullName'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
-
-$sql = "INSERT INTO Parent (FullName, Email, PhoneNumber) VALUES ('$fullName', '$email', '$phone')";
-$conn->query($sql);
-echo "Parent registered successfully.";
-?>
+<div class="container mt-5">
+  <h2 class="mb-4">Register Parent</h2>
+  <form action="register_parent.php" method="POST" class="card p-4 shadow-sm">
+    <div class="mb-3">
+      <label class="form-label">Full Name</label>
+      <input name="fullName" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input name="email" type="email" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Phone</label>
+      <input name="phone" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>
+</div>

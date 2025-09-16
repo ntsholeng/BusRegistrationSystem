@@ -7,7 +7,8 @@ CREATE TABLE Parent (
     ParentID INT PRIMARY KEY AUTO_INCREMENT,
     FullName VARCHAR(100) NOT NULL,
     Email VARCHAR(100) NOT NULL,
-    PhoneNumber VARCHAR(20)
+    PhoneNumber VARCHAR(20),
+    Password VARCHAR(255)
 );
 
 -- Learner Table
